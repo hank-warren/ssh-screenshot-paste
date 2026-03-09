@@ -1,0 +1,16 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/).
+
+## [0.1.1] - 2026-03-09
+
+### Added
+
+- Intercept Cmd+V in remote terminals to paste clipboard screenshots as file paths
+- Save screenshots to `.vscode-screenshots/` in the workspace root via `workspace.fs`
+- Auto-add `.vscode-screenshots/` to `.gitignore`
+- Auto-cleanup of screenshots older than configurable retention period (default 30 days)
+- Transparent fallback to normal paste when clipboard has text or not in a remote session
+- Requires `pngpaste` (`brew install pngpaste`) for reliable clipboard image reading
