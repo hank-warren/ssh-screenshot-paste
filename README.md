@@ -1,9 +1,6 @@
-# SSH Screenshot Paste
+# SSH Clipboard Image
 
 Cmd+V screenshots from your Mac clipboard into VS Code remote terminals. The image is saved to the remote host and the file path is typed into the terminal — ready for Claude Code or any other tool.
-
-[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/jamesprnich.ssh-screenshot-paste)](https://marketplace.visualstudio.com/items?itemName=jamesprnich.ssh-screenshot-paste)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/jamesprnich.ssh-screenshot-paste)](https://marketplace.visualstudio.com/items?itemName=jamesprnich.ssh-screenshot-paste)
 
 ## How it works
 
@@ -37,7 +34,7 @@ brew install pngpaste
 
 - **Transparent Cmd+V** — no new shortcuts to learn, just paste as normal
 - **Remote-first** — files are saved on the remote host, not locally
-- **Auto git exclusion** — `.vscode-screenshots/` is added to `.gitignore` automatically
+- **Auto git exclusion** — `.vscode-screenshots/` is added to `.gitignore` automatically (configurable)
 - **Auto cleanup** — screenshots older than 30 days are deleted (configurable)
 - **Non-intrusive** — only activates in remote SSH terminals with an image on the clipboard. Local terminals, text paste, and non-remote sessions are completely unaffected
 - **Zero config** — works out of the box, settings are optional
@@ -48,6 +45,7 @@ brew install pngpaste
 |---|---|---|
 | `terminalScreenshotPaste.screenshotDir` | `.vscode-screenshots` | Directory name in the workspace root for saving screenshots |
 | `terminalScreenshotPaste.retentionDays` | `30` | Delete screenshots older than this many days. Set to 0 to keep forever. |
+| `terminalScreenshotPaste.manageGitignore` | `false` | Automatically add the screenshot directory to .gitignore |
 
 ## Troubleshooting
 
@@ -61,10 +59,8 @@ Common issues:
 
 ## Contributing
 
-Issues and pull requests are welcome at [github.com/jamesprnich/ssh-screenshot-paste](https://github.com/jamesprnich/ssh-screenshot-paste).
+Issues and pull requests are welcome at [github.com/hank-warren/ssh-clipboard-image](https://github.com/hank-warren/ssh-clipboard-image).
 
 ## License
 
 [MIT](LICENSE)
-
-![](https://cloud.umami.is/p/cWZVxr2Zz)
